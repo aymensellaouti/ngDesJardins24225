@@ -1,0 +1,12 @@
+// npmJs pour les librairies js et css
+https://www.npmjs.com/
+
+// bootstrap
+https://getbootstrap.com/
+
+
+//techwall
+https://www.youtube.com/@TechWall/playlists
+
+//API Swagger
+https://apilb.tridevs.net/explorer/
