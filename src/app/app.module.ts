@@ -11,6 +11,10 @@ import { FormsModule } from '@angular/forms';
 import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
 import { PereComponent } from './communicationInterComponents/pere/pere.component';
 import { FilsComponent } from './communicationInterComponents/fils/fils.component';
+import { CvCardComponent } from './cv/cv-card/cv-card.component';
+import { CvListComponent } from './cv/cv-list/cv-list.component';
+import { CvItemComponent } from './cv/cv-item/cv-item.component';
+import { CvComponent } from './cv/cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { FilsComponent } from './communicationInterComponents/fils/fils.componen
     TwoComponent,
     RotatingCardComponent,
     PereComponent,
-    FilsComponent
+    FilsComponent,
+    CvCardComponent,
+    CvListComponent,
+    CvItemComponent,
+    CvComponent,
   ],
   imports: [
     BrowserModule,
