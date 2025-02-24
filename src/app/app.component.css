@@ -1,0 +1,12 @@
+/* Va appliquer ca sur la balise p */
+p {
+
+}
+/* sur la classe test */
+.test {}
+
+/* id test */
+#test {}
+
+/* toute balise qui contient l'attribut test */
+[test] {}
