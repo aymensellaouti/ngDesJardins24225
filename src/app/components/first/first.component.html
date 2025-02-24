@@ -1,4 +1,7 @@
-<p>first works!</p>
-<div class="alert alert-success">
+<p [hidden]="isHidden"> {{ name }} works!</p>
+
+<input #myInput (change)="changeMessage(myInput.value)" type="text" class="form-control">
+Le contenu de l'input est {{message}}
+<div (click)="showHide()" class="alert alert-success">
   <app-second/>
 </div>
