@@ -18,6 +18,8 @@ import { CvComponent } from './cv/cv/cv.component';
 import { TodoComponent } from './todo/todo/todo.component';
 import { NgstyleExempleComponent } from './directives/ngstyle-exemple/ngstyle-exemple.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
+import { NgclassExempleComponent } from './directives/ngclass-exemple/ngclass-exemple.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { MiniWordComponent } from './directives/mini-word/mini-word.component';
     CvComponent,
     TodoComponent,
     NgstyleExempleComponent,
-    MiniWordComponent
+    MiniWordComponent,
+    NgclassExempleComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

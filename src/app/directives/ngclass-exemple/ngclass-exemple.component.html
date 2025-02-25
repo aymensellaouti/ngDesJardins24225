@@ -1,0 +1,10 @@
+<div
+  (click)="interrupteur()"
+  [ngClass]="{
+    on: isOn,
+    off: !isOn
+  }"
+  class="ampoule">lampe</div>
+
+  <p appHighlight>test directive</p>
+  <p [in]="'green'" [out]="'blue'" appHighlight>test directive</p>
