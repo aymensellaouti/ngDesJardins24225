@@ -28,6 +28,8 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { LoggerService } from './services/logger.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { LoggerService } from './services/logger.service';
     RainbowDirective,
     DefaultImagePipe,
     EmbaucheComponent,
+    NavbarComponent,
+    DetailsCvComponent
   ],
   imports: [
     BrowserModule,
