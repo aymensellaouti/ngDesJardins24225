@@ -5,10 +5,10 @@ import { Cv } from '../model/cv.model';
   providedIn: 'root',
 })
 export class EmbaucheService {
-  #embauchees: Cv[] = [];
+  private embauchees: Cv[] = [];
 
   getEmbauchees(): Cv[] {
-    return this.#embauchees;
+    return this.embauchees;
   }
   /**
    *
