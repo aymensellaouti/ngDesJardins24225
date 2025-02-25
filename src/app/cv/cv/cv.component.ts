@@ -11,7 +11,7 @@ export class CvComponent {
    * Le cv sélectionné
    */
   selectedCv: Cv | null = null;
-
+  today = new Date();
   /**
    * La liste des cvs
    */
@@ -24,7 +24,7 @@ export class CvComponent {
       'enfant',
       '1234',
       4,
-      'rotating_card_profile3.png'
+      ''
     ),
     new Cv(
       3,
@@ -33,7 +33,7 @@ export class CvComponent {
       'Dev',
       '12345',
       20,
-      'rotating_card_profile2.png'
+      '               '
     ),
     new Cv(
       4,
