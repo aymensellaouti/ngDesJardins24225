@@ -6,13 +6,15 @@ import { Todo } from "../model/todo";
 })
 export class TodoService {
 
+  private todos: Todo[] = [];
+
   /**
    * elle retourne la liste des todos
    *
    * @returns Todo[]
    */
   getTodos(): Todo[] {
-    return [];
+    return this.todos;
   }
 
   /**
@@ -40,5 +42,6 @@ export class TodoService {
    * @returns void
    */
   logTodos() {
+    console.log(this.todos);
   }
 }
