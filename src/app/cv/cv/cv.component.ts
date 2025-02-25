@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Cv } from '../model/cv.model';
+import { LoggerService } from 'src/app/services/logger.service';
 
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.css'],
+  providers: [],
 })
 export class CvComponent {
   /**
@@ -17,24 +19,8 @@ export class CvComponent {
    */
   cvs: Cv[] = [
     new Cv(1, 'aymen', 'sellaouti', 'teacher', '1234', 40, 'as.jpg'),
-    new Cv(
-      2,
-      'skander',
-      'sellaouti',
-      'enfant',
-      '1234',
-      4,
-      ''
-    ),
-    new Cv(
-      3,
-      'Adebayo',
-      'Lakatan',
-      'Dev',
-      '12345',
-      20,
-      '               '
-    ),
+    new Cv(2, 'skander', 'sellaouti', 'enfant', '1234', 4, ''),
+    new Cv(3, 'Adebayo', 'Lakatan', 'Dev', '12345', 20, '               '),
     new Cv(
       4,
       'Cedric',
@@ -108,7 +94,10 @@ export class CvComponent {
       'rotating_card_profile.png'
     ),
   ];
-
+  private loggerService = inject(LoggerService);
+  constructor() {
+    this.loggerService.log('cc je suis le cvComponent');
+  }
   onSelectCv(cv: Cv) {
     this.selectedCv = cv;
   }
