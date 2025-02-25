@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Cv } from '../model/cv.model';
 
 @Component({
@@ -9,5 +9,15 @@ import { Cv } from '../model/cv.model';
 export class CvItemComponent {
   // J'affiche le nom prenom et image d'un cv
   @Input({required: true})
-  cv!: Cv
+  cv!: Cv;
+
+  @Output()
+  selectCv = new EventEmitter<Cv>();
+
+  /**
+   * On met un event qui notifie que le cv a été sélectionné
+   */
+  onSelectCv() {
+    this.selectCv.emit(this.cv);
+  }
 }

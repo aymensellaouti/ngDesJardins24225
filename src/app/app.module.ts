@@ -15,6 +15,7 @@ import { CvCardComponent } from './cv/cv-card/cv-card.component';
 import { CvListComponent } from './cv/cv-list/cv-list.component';
 import { CvItemComponent } from './cv/cv-item/cv-item.component';
 import { CvComponent } from './cv/cv/cv.component';
+import { TodoComponent } from './todo/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CvComponent } from './cv/cv/cv.component';
     CvListComponent,
     CvItemComponent,
     CvComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

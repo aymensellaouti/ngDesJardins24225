@@ -8,6 +8,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class FilsComponent {
   @Input()
   message = "cc je n'ai encore rien reçu";
+
+  // On définit l'event
   @Output()
   sendMessageToPapa = new EventEmitter<string>();
 

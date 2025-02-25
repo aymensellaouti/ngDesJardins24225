@@ -12,6 +12,9 @@ export class CvComponent {
    */
   selectedCv: Cv | null = null;
 
+  /**
+   * La liste des cvs
+   */
   cvs: Cv[] = [
     new Cv(1, 'aymen', 'sellaouti', 'teacher', '1234', 40, 'as.jpg'),
     new Cv(
@@ -24,4 +27,8 @@ export class CvComponent {
       'rotating_card_profile3.png'
     ),
   ];
+
+  onSelectCv(cv: Cv) {
+    this.selectedCv = cv;
+  }
 }
