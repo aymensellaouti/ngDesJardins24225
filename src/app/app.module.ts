@@ -22,6 +22,7 @@ import { NgclassExempleComponent } from './directives/ngclass-exemple/ngclass-ex
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
     NgclassExempleComponent,
     HighlightDirective,
     RainbowDirective,
-    DefaultImagePipe
+    DefaultImagePipe,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,
