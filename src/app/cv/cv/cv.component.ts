@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Cv } from '../model/cv.model';
 import { LoggerService } from 'src/app/services/logger.service';
 import { TodoService } from 'src/app/todo/service/todo.service';
+import { CvService } from '../services/cv.service';
 
 @Component({
   selector: 'app-cv',
@@ -15,11 +16,11 @@ export class CvComponent {
    */
   selectedCv: Cv | null = null;
   today = new Date();
-  todoService = inject(TodoService);
+  cvService = inject(CvService);
   /**
    * La liste des cvs
    */
-  cvs: Cv[] = [];
+  cvs: Cv[] = this.cvService.getCvs();
   private loggerService = inject(LoggerService);
   constructor() {
     this.loggerService.log('cc je suis le cvComponent');
