@@ -16,6 +16,8 @@ import { CvListComponent } from './cv/cv-list/cv-list.component';
 import { CvItemComponent } from './cv/cv-item/cv-item.component';
 import { CvComponent } from './cv/cv/cv.component';
 import { TodoComponent } from './todo/todo/todo.component';
+import { NgstyleExempleComponent } from './directives/ngstyle-exemple/ngstyle-exemple.component';
+import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { TodoComponent } from './todo/todo/todo.component';
     CvListComponent,
     CvItemComponent,
     CvComponent,
-    TodoComponent
+    TodoComponent,
+    NgstyleExempleComponent,
+    MiniWordComponent
   ],
   imports: [
     BrowserModule,
