@@ -36,6 +36,7 @@ import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
 import { TestObservableComponent } from './rxjs/test-observable/test-observable.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { AUTH_INTERCEPTOR_PROVIDER } from './auth/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,7 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     NF404Component,
     TestFormComponent,
     TestObservableComponent,
-    AddCvComponent
+    AddCvComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,9 +74,9 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AUTH_INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
