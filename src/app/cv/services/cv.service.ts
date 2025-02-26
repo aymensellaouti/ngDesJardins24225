@@ -115,6 +115,13 @@ export class CvService {
     return this.cvs.find((cv) => cv.id == id) ?? null;
   }
 
+  getCvByIdFromApi(id: number): Observable<Cv> {
+    return this.http.get<Cv>(APP_API.cv + id);
+  }
+  deleteCvByIdFromApi(id: number): Observable<{count: number}> {
+    return this.http.delete<{ count: number }>(APP_API.cv + id);
+  }
+
   /**
    *
    * Supprime un cv s'il le trouve
