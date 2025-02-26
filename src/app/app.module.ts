@@ -30,6 +30,7 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { LoggerService } from './services/logger.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
     DefaultImagePipe,
     EmbaucheComponent,
     NavbarComponent,
-    DetailsCvComponent
+    DetailsCvComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
