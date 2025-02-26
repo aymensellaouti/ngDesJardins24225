@@ -14,9 +14,10 @@ export class CvComponent {
   /**
    * Le cv sélectionné
    */
-  selectedCv: Cv | null = null;
   today = new Date();
   cvService = inject(CvService);
+  selectedCv$ = this.cvService.selectedCv$;
+  selectedCv: Cv | null = null;
   /**
    * La liste des cvs
    */
@@ -24,8 +25,11 @@ export class CvComponent {
   private loggerService = inject(LoggerService);
   constructor() {
     this.loggerService.log('cc je suis le cvComponent');
+    this.cvService.selectedCv$.subscribe({
+      next: cv => this.selectedCv = cv
+    })
   }
-  onSelectCv(cv: Cv) {
-    this.selectedCv = cv;
-  }
+  // onSelectCv(cv: Cv) {
+  //   this.selectedCv = cv;
+  // }
 }
