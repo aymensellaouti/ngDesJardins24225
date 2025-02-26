@@ -11,12 +11,13 @@ import { APP_ROUTES } from './config/app-routes.config';
 import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { authGuard } from './auth/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: FirstComponent},
   { path: APP_ROUTES.cv, component: CvComponent},
+  { path: `${APP_ROUTES.cv}/add`, component: AddCvComponent, canActivate: [authGuard]},
   { path: `${APP_ROUTES.cv}/:id`, component: DetailsCvComponent},
-  { path: `${APP_ROUTES.cv}/add`, component: AddCvComponent},
   { path: APP_ROUTES.todo, component: TodoComponent},
   { path: 'word', component: MiniWordComponent},
   { path: 'color', component: ColorComponent},
