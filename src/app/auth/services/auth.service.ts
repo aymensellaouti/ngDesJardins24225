@@ -1,6 +1,8 @@
 import { inject, Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { APP_CONSTANTES } from "src/app/config/app-constantes.config";
+import { CredentialsDto } from "../dto/credentials.dto";
+import { LoginResponseDto } from "../dto/login-response.dto";
 
 
 export class ConnectedUser {
@@ -25,7 +27,7 @@ export class AuthService {
     localStorage.removeItem(APP_CONSTANTES.token);
   }
 
-  // login(credentials: CredentialsDto): Observable<LoginResponseDto> {}
+  login(credentials: CredentialsDto): Observable<LoginResponseDto> {}
 
   isAuthenticated(): boolean {
     return true;
