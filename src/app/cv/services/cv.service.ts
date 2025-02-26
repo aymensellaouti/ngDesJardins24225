@@ -1,6 +1,8 @@
-import {  Injectable } from '@angular/core';
+import {  inject, Injectable } from '@angular/core';
 import { Cv } from '../model/cv.model';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { APP_API } from 'src/app/config/app-api.config';
 
 
 @Injectable({
@@ -84,7 +86,7 @@ export class CvService {
       'rotating_card_profile.png'
     ),
   ];
-
+  http = inject(HttpClient);
   private selectCvSubject$ = new Subject<Cv>();
   /**
    * Le flux des cvs sélectionnées : Cv1, Cv4, Cv10, ...
@@ -96,6 +98,10 @@ export class CvService {
    */
   getCvs(): Cv[] {
     return this.cvs;
+  }
+
+  getCvsFromApi(): Observable<Cv[]> {
+    return this.http.get<Cv[]>(APP_API.cv);
   }
 
   /**
